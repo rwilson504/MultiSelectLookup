@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-  <control namespace="ktcs" constructor="MultiSelectLookup" version="0.0.2" display-name-key="MultiSelectLookup" description-key="MultiSelectLookup description" control-type="virtual" >
+  <control namespace="ktcs" constructor="MultiSelectLookup" version="0.0.3" display-name-key="MultiSelectLookup" description-key="MultiSelectLookup description" control-type="virtual" >
     <external-service-usage enabled="false">
     </external-service-usage>
     <data-set name="dataset" display-name-key="dataset">
     </data-set>
+    <property name="recordId" display-name-key="Record Id" description-key="(required) bind to the record id field" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="entityName" display-name-key="Entity Name" description-key="(required) bind to entitylogicalname field of the entity" of-type="SingleLine.Text" usage="input" required="true" />
     <property name="relationship" display-name-key="Relationship Name" description-key="(required) schemaname of the N:N relationship" of-type="SingleLine.Text" usage="input" required="true" />
     <property name="allowAddNew" display-name-key="Allow Add New" description-key="(boolean) when True, adds an Add New button to the combobox dropdown" of-type="TwoOptions" usage="input" required="true" />
     <property name="label" display-name-key="Label" description-key="(optional) display label for the lookup control (use this when the control is more than 33% of form width to avoid a visible horizontal divider)" of-type="SingleLine.Text" usage="input" required="false" />
