@@ -5,12 +5,16 @@ This repo contains the working code for replacing a N:N subgrid with a convincin
 ![gif demonstration of the code in action](/images/demo.gif)
 
 ## Usage
+
 Build the control and import to your solution, or optionally just import the [solution.zip](/Solution/Solution.zip) file to your environment to get started right away.
 
 The control provides for several configuration parameters. Some of them may be a bit surprising, but remember: we are replacing a _subgrid_ to make it look like a _field_ so some seemingly obvious elements need to be configured.
 
-**PROPERTIES**
+### PROPERTIES
+
 - **dataset**: this is the N:N relationship to which you will bind the control and from which it will populate 'lookup' relationships.
+- **Record Id**: bind to the record id field for the primary entity.
+- **Entity Name** bind to the entitylogicalname field or enter the name of the primary entity as a static value.
 - **Relationship Name**: this is the schemaname of the N:N relationship (_not_ the intersect entity). It is required for the Associate/Disassociate operations happening in the background.
 - **Allow Add New**: this configures whether you want to include an "add new" button inside the dropdown tied to the lookup.
 - **Label** (optional): This allows you to insert your own label value. Subgrid labels are slightly larger and semibold, so to keep a uniform look and feel, this option allows you to insert a more "field-like" label.
@@ -22,10 +26,12 @@ The control provides for several configuration parameters. Some of them may be a
 - **Match Terms**: (only applicable if Advanced Search is enabled) This parameter allows you to designate whether multiple search terms in a string should be combined as "All Words" or "Any Word" in the search string.
 - **Enable Best Effort Searching**: (only applicable if Advanced Search is enabled) This parameter allows you to designate whether the control should attempt to search for a term even if it is not found in the search index. This can be useful for partial matches or misspellings.
 
- ## Limitations
+## Limitations
+
 This control is still under active code development. The latest release has added more robust search capabilities, but the code is still an active development project. Known issues and limitations will be listed here as they are identified.
 
 - In Advanced Search mode, when focus leaves the control and then returns, the search results from the last search are still displayed, even though the search string in the box has been cleared. This does not interfere with use of the control, but is a visual bug.
 
- ## Contributing
- Contributions are welcome! If you have code to suggest, submit a PR: if you have ideas to offer, submit an Issue!
+## Contributing
+
+Contributions are welcome! If you have code to suggest, submit a PR: if you have ideas to offer, submit an Issue!
