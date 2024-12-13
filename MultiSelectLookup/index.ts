@@ -27,6 +27,9 @@ export class MultiSelectLookup
     this.context = context;
     const dataSet = context.parameters.dataset;
 
+    // Allow for hiding of control
+    if (!context.mode.isVisible) return React.createElement(React.Fragment);
+
     // If the dataset is still loading, return an empty fragment
     if (context.parameters.dataset.loading) {
       console.log("loading");
